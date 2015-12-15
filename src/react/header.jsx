@@ -21,15 +21,15 @@ module.exports = React.createClass({
 		return (
 			<div id="header" className="container">
 				<div id="logo">
-					<h1><a href="#">repkam09.com</a></h1>
+					<h1><a href="#">Mark Repka</a></h1>
 				</div>
 				<div id="menu">
 					<ul>
-						<li className="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
-						<li><a href="#" accesskey="2" title="">Our Clients</a></li>
-						<li><a href="#" accesskey="3" title="">About Us</a></li>
-						<li><a href="#" accesskey="4" title="">Careers</a></li>
-						<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+						<li className="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
+						<li><a href="/blog/" accesskey="2" title="">Blog</a></li>
+						<li><a href="/about/" accesskey="3" title="">About</a></li>
+						<li><a href="/contact/" accesskey="4" title="">Contact</a></li>
+						<li><a href="/resume.pdf" accesskey="5" title="">Résumé</a></li>
 					</ul>
 				</div>
 			</div>
