@@ -1,8 +1,12 @@
 var React = require('react');
 
+// Different text to display as a tagline in the header
+var textblocks = ["RIT Student", "Software Engineer", "JavaScript Programmer", "Linux User", "RuneScape Player", "Factorio Player", "Reactjs Enthusiast"];
+var timer = null;
+
 module.exports = React.createClass({
 	getInitialState: function() {
-		return { };
+		return {swapcount: 0 };
 	},
 
 	componentWillMount: function(){
@@ -11,17 +15,33 @@ module.exports = React.createClass({
 
 	componentDidMount: function() {
 		// Do something when the react component is first drawn to the screen
+        var that = this;
+        timer = setInterval(function() {
+            var tempcount = that.state.swapcount;
+            
+            tempcount = (tempcount + 1);
+            if (tempcount >= textblocks.length) {
+                tempcount = 0;
+            }
+            
+            that.setState({swapcount: tempcount});
+            
+        }, 3000);
 	},
 
 	componentWillUnmount: function() {
 		// Do something when the react component is no longer needed
+        clearInterval(timer);
 	},
 
 	render: function() {
+        var swaptext = textblocks[this.state.swapcount];
+                
 		return (
 			<div id="header" className="container">
 				<div id="logo">
 					<h1><a href="#">Mark Repka</a></h1>
+                    <p>{swaptext}</p>
 				</div>
 				<div id="menu">
 					<ul>
