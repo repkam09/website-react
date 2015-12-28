@@ -3,9 +3,9 @@ var React = require('react');
 // Different text to display as a tagline in the header
 var textblocks = ["Software Engineer, RIT Student",
                   "JavaScript and ReactJS Programmer",
-                  "Long time Linux user",
-                  "Minecraft and RuneScape Player",
-                  "Raspberry Pi enthusiast"];
+                  "Experienced Linux User",
+                  "Minecraft Server Admin",
+                  "Raspberry Pi Enthusiast"];
 var timer = null;
 
 module.exports = React.createClass({
@@ -40,7 +40,31 @@ module.exports = React.createClass({
 
 	render: function() {
         var swaptext = textblocks[this.state.swapcount];
-                
+        
+        
+        // Create an array that represents the nav bar
+        var navbar = [];
+        navbar.push({key: 1, link: "/", text:"Home"});
+        navbar.push({key: 2, link: "/blog/", text:"Blog"});
+        navbar.push({key: 3, link: "/about/", text:"About"});
+        navbar.push({key: 4, link: "/contact/", text:"Contact"});
+        navbar.push({key: 5, link: "/files/resume.pdf", text:"Résumé"});
+        
+        var menubar = navbar.map(function(option) {
+           var currentLocation = window.location.pathname;
+
+           // Do some magic to highlight the current page
+           var classAddName = "";
+           if (option.link === currentLocation) {
+               classAddName = "current_page_item";
+           }
+
+           return (
+               <li key={option.key} className={classAddName} ><a href={option.link} accessKey={option.key} title="">{option.text}</a></li>
+           );
+        });
+        
+
 		return (
 			<div id="header" className="container">
 				<div id="logo">
@@ -49,11 +73,7 @@ module.exports = React.createClass({
 				</div>
 				<div id="menu">
 					<ul>
-						<li className="current_page_item"><a href="#" accessKey="1" title="">Home</a></li>
-						<li><a href="#" accessKey="2" title="">Blog</a></li>
-						<li><a href="#" accessKey="3" title="">About</a></li>
-						<li><a href="#" accessKey="4" title="">Contact</a></li>
-						<li><a href="#" accessKey="5" title="">Résumé</a></li>
+						{menubar}
 					</ul>
 				</div>
 			</div>

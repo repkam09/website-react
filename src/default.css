@@ -54,7 +54,13 @@
 
 	a
 	{
-		color: #0000FF;
+		color: #656565;
+	}
+    
+    .nolink
+	{
+        text-decoration: none;
+		color: #656565;
 	}
 
 	a:hover
@@ -478,7 +484,7 @@
 	#footer-wrapper
 	{
 		overflow: hidden;
-		padding: 5em 0em;
+		padding: 1em 0em;
 		border-top: 1px solid rgba(255,255,255,0.08);
 	}
 
@@ -544,8 +550,9 @@
 	padding: 3em 2em 2em 2em;
 	border: 1px solid rgba(0,0,0,0.1);
 	border-radius: 8px;
-		text-align: center;
+	text-align: center;
 }
+
 
 
 	#extra
@@ -571,6 +578,4 @@
 		text-align: center;
 		font-size: 3em;
 	}
-
-
 

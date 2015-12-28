@@ -10,49 +10,58 @@ Version    : 1.0
 Released   : 20140309
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
-<link href="/default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
+    <link href="/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 </head>
+
 <body>
-<div id="wrapper">
-	<!-- Header line to be inserted by React component -->
-	<div id="header-wrapper"></div>
-	<div id="extra" class="container">
-		<div class="title">
-			<h2>Software Development</h2>
-			<span class="byline">Below you can see a few of the projects and services that Mark has created</span> </div>
-		<div id="three-column">
-			<div class="boxA">
-				<div class="box"> <span class="fa fa-cloud-download"></span>
-					<p>Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
-				</div>
-			</div>
-			<div class="boxB">
-				<div class="box"> <span class="fa fa-cogs"></span>
-					<p>Etiam neque. Vivamus consequat lorem at nisl. Nullam non wisi a sem semper eleifend. Donec mattis.</p>
-				</div>
-			</div>
-			<div class="boxC">
-				<div class="box"> <span class="fa fa-user"></span>
-					<p> Aenean lectus lorem, imperdiet at, ultrices eget, ornare et, wisi. Pellentesque adipiscing purus.</p>
-				</div>
-			</div>
-		</div>
-		<ul class="actions">
-			<li><a href="#" class="button">Etiam posuere</a></li>
-		</ul>
-	</div>
-</div>
-<!-- Footer line to be inserted by React component -->
-<div id="footer-wrapper">
-</div>
-<script src="/app.js"></script>
+    <div id="wrapper">
+        <!-- Header line to be inserted by React component -->
+        <div id="header-wrapper"></div>
+        <!-- Header line to be inserted by React component -->
+        <div id="extra" class="container">
+            <div class="title">
+                <h2>Featured Projects</h2>
+                <span class="byline">Current Software Projects and Services</span>
+            </div>
+            <div id="three-column">
+                <div class="boxA">
+                    <a class="nolink" href="https://github.com/repkam09">
+                        <div class="box"> <span class="fa fa-github"></span>
+                            <p>View all of my projects on my public GitHub page. Feel free to fork, pull request, or comment!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="boxB">
+                    <a class="nolink" href="/tools/raspi-temp-monitor/">
+                        <div class="box"> <span class="fa fa-cloud"></span>
+                            <p>View the Raspberry Pi tempreature monitor project information</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="boxC">
+                    <a class="nolink" href="https://mc.repkam09.com">
+                        <div class="box"> <span class="fa fa-gamepad"></span>
+                            <p>Find out more information about the 'Server of the Mines' Minecraft Server. This server is whitelisted.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer line to be inserted by React component -->
+    <div id="footer-wrapper">
+        <!-- Footer line to be inserted by React component -->
+    </div>
+    <script src="/app.js"></script>
 </body>
+
 </html>
