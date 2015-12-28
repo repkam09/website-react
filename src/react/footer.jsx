@@ -19,7 +19,7 @@ module.exports = React.createClass({
 
 	render: function() {
 		return (
-			<p>&copy; Mark Repka. All rights reserved. | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+			<p>&copy; Mark Repka. All rights reserved. | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. | <a href="https://github.com/repkam09/website-react">View Source on GitHub</a>.</p>
 		);
 	}
 });

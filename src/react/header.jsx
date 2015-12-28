@@ -1,7 +1,11 @@
 var React = require('react');
 
 // Different text to display as a tagline in the header
-var textblocks = ["RIT Student", "Software Engineer", "JavaScript Programmer", "Linux User", "RuneScape Player", "Factorio Player", "Reactjs Enthusiast"];
+var textblocks = ["Software Engineer, RIT Student",
+                  "JavaScript and ReactJS Programmer",
+                  "Long time Linux user",
+                  "Minecraft and RuneScape Player",
+                  "Raspberry Pi enthusiast"];
 var timer = null;
 
 module.exports = React.createClass({
@@ -45,11 +49,11 @@ module.exports = React.createClass({
 				</div>
 				<div id="menu">
 					<ul>
-						<li className="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
-						<li><a href="/blog/" accesskey="2" title="">Blog</a></li>
-						<li><a href="/about/" accesskey="3" title="">About</a></li>
-						<li><a href="/contact/" accesskey="4" title="">Contact</a></li>
-						<li><a href="/resume.pdf" accesskey="5" title="">Résumé</a></li>
+						<li className="current_page_item"><a href="#" accessKey="1" title="">Home</a></li>
+						<li><a href="#" accessKey="2" title="">Blog</a></li>
+						<li><a href="#" accessKey="3" title="">About</a></li>
+						<li><a href="#" accessKey="4" title="">Contact</a></li>
+						<li><a href="#" accessKey="5" title="">Résumé</a></li>
 					</ul>
 				</div>
 			</div>
