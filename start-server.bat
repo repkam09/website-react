@@ -1,1 +1,0 @@
-SimpleHttpFileServer.exe -d ./build/ -p 8080
