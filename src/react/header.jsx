@@ -68,7 +68,7 @@ module.exports = React.createClass({
 		return (
 			<div id="header" className="container">
 				<div id="logo">
-					<h1><a href="#">Mark Repka</a></h1>
+					<h1><a href="/">Mark Repka</a></h1>
                     <p>{swaptext}</p>
 				</div>
 				<div id="menu">
