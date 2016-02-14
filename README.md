@@ -10,3 +10,4 @@ This README file will also document some of the required packages that I use for
 Current server hosting is provided through a DigitalOcean VPS running Ubuntu 15.04.
 
 This is a rewrite of the website using some dynamic feature of reactjs instead of PHP!
+This repository can also be found on my Gogs deployment here: https://dev.repkam09.com/repkam09/website-react/
