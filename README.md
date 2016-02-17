@@ -2,6 +2,7 @@ website
 =======
 
 [![Build Status](https://travis-ci.org/repkam09/website-react.svg?branch=master)](https://travis-ci.org/repkam09/website-react)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/9219a9d1b2ec4e4889f15a473ba2c970)](https://www.codacy.com/app/mark_12/website-react)
 
 Template files and CSS for my website https://repkam09.com
 
