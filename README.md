@@ -1,6 +1,8 @@
 website
 =======
 
+[![Build Status](https://travis-ci.org/repkam09/website-react.svg?branch=master)](https://travis-ci.org/repkam09/website-react)
+
 Template files and CSS for my website https://repkam09.com
 
 
