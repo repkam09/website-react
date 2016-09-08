@@ -45,7 +45,7 @@ module.exports = React.createClass({
         // Create an array that represents the nav bar
         var navbar = [];
         navbar.push({key: 1, link: "/", text:"Home"});
-        navbar.push({key: 2, link: "/blog/", text:"Blog"});
+        navbar.push({key: 2, link: "https://nuc.repkam09.com/", text:"NUC"});
         navbar.push({key: 3, link: "/about/", text:"About"});
         navbar.push({key: 4, link: "/contact/", text:"Contact"});
         navbar.push({key: 5, link: "/files/resume.pdf", text:"Résumé"});
