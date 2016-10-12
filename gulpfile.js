@@ -1,9 +1,11 @@
 var browserify = require("browserify");
 var gulp = require("gulp");
 var rename = require("gulp-rename");
+var uglify = require('gulp-uglify');
 var source = require("vinyl-source-stream");
 var buffer = require("vinyl-buffer");
 var reactify = require("reactify");
+
 
 var src = "src/";
 var output = "../build/";
@@ -26,6 +28,7 @@ var doBrowserify = function (bundle) {
 	return bundle.pipe(source("app.js"))
 	.pipe(buffer())
 	.pipe(rename("app.js"))
+	.pipe(uglify())
 	.pipe(gulp.dest(output));
 };
 
@@ -41,9 +44,12 @@ gulp.task("copy_direct", function () {
 	.pipe(gulp.dest(output));
 });
 
+gulp.task('applyprod', function() {
+    process.env.NODE_ENV = 'production';
+});
 
 // The list of tasks to do by default
-var tasklist = ["copy_direct", "browserify"];
+var tasklist = ["applyprod", "copy_direct", "browserify"];
 
 gulp.task("default",(function () {
     return tasklist;
