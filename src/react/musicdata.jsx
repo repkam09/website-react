@@ -46,8 +46,8 @@ module.exports = React.createClass({
 			}
 
 			return (
-				<div>
-					<p>I am currently listening to <b>{this.state.trackname}</b> by <b>{this.state.artistname}</b> off the album <b>{this.state.albumname}</b></p>
+				<div className="music-wrapper">
+					<p>According to <a href="http://www.last.fm/user/Repkam09">Last.FM</a>, I am currently listening to <b>{this.state.trackname}</b> by <b>{this.state.artistname}</b> off the album <b>{this.state.albumname}</b></p>
 					{albumart}
 				</div>
 			);
