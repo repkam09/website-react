@@ -7,4 +7,4 @@ var musicdata = React.createElement(require("./react/musicdata"));
 
 ReactDOM.render(header, document.getElementById("header-wrapper"));
 ReactDOM.render(footer, document.getElementById("footer-wrapper"));
-ReactDOM.render(footer, document.getElementById("music-data"));
+ReactDOM.render(musicdata, document.getElementById("music-data"));

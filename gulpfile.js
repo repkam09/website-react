@@ -15,21 +15,20 @@ process.chdir(src);
 
 var createBrowserify = function () {
 	return browserify({
-		entries : "./website-react.js",
-		extensions : [".jsx"], // Needed to find the React JSX source files.
-		transform : [reactify],
-		cache : {}, // Required by watchify.
-		packageCache : {}, // Required by watchify.
-		fullPaths : true
+		entries: "./website-react.js",
+		extensions: [".jsx"], // Needed to find the React JSX source files.
+		transform: [reactify],
+		cache: {}, // Required by watchify.
+		packageCache: {}, // Required by watchify.
+		fullPaths: true
 	});
 };
 
 var doBrowserify = function (bundle) {
 	return bundle.pipe(source("app.js"))
-	.pipe(buffer())
-	.pipe(rename("app.js"))
-	.pipe(uglify())
-	.pipe(gulp.dest(output));
+		.pipe(buffer())
+		.pipe(rename("app.js"))		
+		.pipe(gulp.dest(output));
 };
 
 gulp.task("browserify", function () {
@@ -38,19 +37,19 @@ gulp.task("browserify", function () {
 });
 
 gulp.task("copy_direct", function () {
-	gulp.src(["**/*.html", "**/*.png", "favicon.ico", "**/*.css", "font/*"], {
-		buffer : false
+	gulp.src(["**/*.html", "**/*.png", "**/*.jpg", "favicon.ico", "**/*.css", "font/*"], {
+		buffer: false
 	})
-	.pipe(gulp.dest(output));
+		.pipe(gulp.dest(output));
 });
 
-gulp.task('applyprod', function() {
-    process.env.NODE_ENV = 'production';
+gulp.task('applyprod', function () {
+	process.env.NODE_ENV = 'production';
 });
 
 // The list of tasks to do by default
 var tasklist = ["applyprod", "copy_direct", "browserify"];
 
-gulp.task("default",(function () {
-    return tasklist;
+gulp.task("default", (function () {
+	return tasklist;
 })());
