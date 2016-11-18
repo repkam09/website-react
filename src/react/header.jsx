@@ -1,11 +1,14 @@
 var React = require('react');
 
 // Different text to display as a tagline in the header
-var textblocks = ["Software Engineer, RIT Student",
-    "JavaScript and ReactJS Programmer",
-    "Experienced Linux User",
-    "Minecraft Server Admin",
-    "Raspberry Pi Enthusiast"];
+var textblocks =
+    ["Software Engineer, RIT Alumni",
+     "JavaScript/Node Programmer",
+     "Casual RuneScape Player",
+     "RITLug/FOSS@MAGIC Member",
+     "Casual Minecraft Player",
+     "Runs Linux On Everything",
+     "Raspberry Pi Enthusiast"];
 var timer = null;
 
 module.exports = React.createClass({
@@ -18,8 +21,24 @@ module.exports = React.createClass({
     },
 
     componentDidMount: function () {
-        // Do something when the react component is first drawn to the screen
         var that = this;
+
+        // Get the current page from the window location
+        var pagename = window.location.pathname;
+        pagename = pagename.replace(new RegExp("/", 'g'), "");
+
+        console.log("The " + pagename + " page has been loaded");
+        /*
+        // Eventually log the current page maybe. But this API isnt ready yet.
+        getreq("https://api.repkam09.com/api/lifeforce/heartbeat/site_" + pagename).then((response) => {
+            // Logging worked
+        }).catch((error) => {
+            // Logging failed, but we dont care!
+        });
+        */
+
+        // Do something when the react component is first drawn to the screen
+
         timer = setInterval(function () {
             var tempcount = that.state.swapcount;
 
