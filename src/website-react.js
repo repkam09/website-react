@@ -68,6 +68,7 @@ var footer = React.createElement(require("./react/footer"));
 var musicdata = React.createElement(require("./react/musicdata"));
 var apilist = React.createElement(require("./react/apilist"));
 var loginpage = React.createElement(require("./react/login/loginpage"));
+var songcounter = React.createElement(require("./react/songcounter"));
 
 // These should always exist on every page
 ReactDOM.render(header, document.getElementById("header-wrapper"));
@@ -84,4 +85,8 @@ if (document.getElementById("music-data")) {
 
 if (document.getElementById("login-page")) {
     ReactDOM.render(loginpage, document.getElementById("login-page"));
+}
+
+if (document.getElementById("song-counter")) {
+    ReactDOM.render(songcounter, document.getElementById("song-counter"));
 }
