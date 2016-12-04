@@ -539,3 +539,18 @@
 		font-size: 3em;
 	}
 
+ .flashing {
+   animation-duration: 200ms;
+   animation-name: blink;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+}
+@keyframes blink {
+   from {
+      background-color: black;
+   }
+   to {
+      background-color: white;
+   }
+ }
+ 
