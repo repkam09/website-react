@@ -33,7 +33,7 @@ module.exports = React.createClass({
 
         console.log("The " + pagename + " page has been loaded");
         // Eventually log the current page maybe. But this API isnt ready yet.
-        getreq("https://api.repkam09.com/api/lifeforce/heartbeat/site_" + pagename).then((response) => {
+        getreq("https://api.repkam09.com/api/lifeforce/analytics/site_" + pagename).then((response) => {
             // Logging worked
         }).catch((error) => {
             // Logging failed, but we dont care!
