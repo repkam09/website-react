@@ -63,12 +63,12 @@ window.getreq = function (url) {
 }
 
 
-var header = React.createElement(require("./react/header"));
-var footer = React.createElement(require("./react/footer"));
-var musicdata = React.createElement(require("./react/musicdata"));
-var apilist = React.createElement(require("./react/apilist"));
-var loginpage = React.createElement(require("./react/login/loginpage"));
-var songcounter = React.createElement(require("./react/songcounter"));
+const header = React.createElement(require("./react/header"));
+const footer = React.createElement(require("./react/footer"));
+const musicdata = React.createElement(require("./react/musicdata"));
+const apilist = React.createElement(require("./react/apilist"));
+const loginpage = React.createElement(require("./react/login/loginpage"));
+const songcounter = React.createElement(require("./react/songcounter"));
 
 // These should always exist on every page
 ReactDOM.render(header, document.getElementById("header-wrapper"));
