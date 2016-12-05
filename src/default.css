@@ -533,11 +533,33 @@
 
 	#extra .fa
 	{
+		height: 60px;
 		display: block;
 		margin-bottom: 0.5em;
 		text-align: center;
 		font-size: 3em;
 	}
+
+	.fa-github {		
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url("/img/fa-github.png");
+	}
+
+	.fa-cloud {
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url("/img/fa-cloud.png");
+	}
+
+	.fa-gamepad {
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url("/img/fa-gamepad.png");
+	}		
 
  .flashing {
    animation-duration: 200ms;
