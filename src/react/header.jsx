@@ -23,21 +23,29 @@ module.exports = React.createClass({
     componentDidMount: function () {
         var that = this;
 
-        // Get the current page from the window location
-        var pagename = window.location.pathname;
-        pagename = pagename.replace(new RegExp("/", 'g'), "");
+        if (window.location.hostname !== "localhost") {
+            debugger;
 
-        if (pagename === "") {
-            pagename = "home";
+            // Get the current page from the window location
+            var pagename = window.location.pathname;
+
+
+            pagename = pagename.replace(new RegExp("/", 'g'), "");
+
+            if (pagename === "") {
+                pagename = "home";
+            }
+
+            console.log("The " + pagename + " page has been loaded");
+            // Eventually log the current page maybe. But this API isnt ready yet.
+            getreq("https://api.repkam09.com/api/lifeforce/analytics/site_" + pagename).then((response) => {
+                // Logging worked
+            }).catch((error) => {
+                // Logging failed, but we dont care!
+            });
+        } else {
+            console.log("Analytics skipped because this appears to be a development build");
         }
-
-        console.log("The " + pagename + " page has been loaded");
-        // Eventually log the current page maybe. But this API isnt ready yet.
-        getreq("https://api.repkam09.com/api/lifeforce/analytics/site_" + pagename).then((response) => {
-            // Logging worked
-        }).catch((error) => {
-            // Logging failed, but we dont care!
-        });
 
         // Do something when the react component is first drawn to the screen
 
