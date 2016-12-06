@@ -27,7 +27,7 @@ var createBrowserify = function () {
 var doBrowserify = function (bundle) {
 	return bundle.pipe(source("app.js"))
 		.pipe(buffer())
-		.pipe(rename("app.js"))		
+		.pipe(rename("app.js"))
 		.pipe(gulp.dest(output));
 };
 
