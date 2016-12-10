@@ -69,6 +69,7 @@ const musicdata = React.createElement(require("./react/musicdata"));
 const apilist = React.createElement(require("./react/apilist"));
 const loginpage = React.createElement(require("./react/login/loginpage"));
 const songcounter = React.createElement(require("./react/songcounter"));
+//const comicviewer = React.createElement(require("./react/comics/comicviewer"));
 
 // These should always exist on every page
 ReactDOM.render(header, document.getElementById("header-wrapper"));
@@ -89,4 +90,8 @@ if (document.getElementById("login-page")) {
 
 if (document.getElementById("song-counter")) {
     ReactDOM.render(songcounter, document.getElementById("song-counter"));
+}
+
+if (document.getElementById("qc-comic-viewer")) {
+    ReactDOM.render(comicviewer, document.getElementById("qc-comic-viewer"));
 }
