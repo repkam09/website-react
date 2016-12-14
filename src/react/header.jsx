@@ -24,8 +24,6 @@ module.exports = React.createClass({
         var that = this;
 
         if (window.location.hostname !== "localhost") {
-            debugger;
-
             // Get the current page from the window location
             var pagename = window.location.pathname;
 
