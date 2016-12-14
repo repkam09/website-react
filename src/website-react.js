@@ -65,28 +65,32 @@ window.getreq = function (url) {
 
 const header = React.createElement(require("./react/header"));
 const footer = React.createElement(require("./react/footer"));
-const musicdata = React.createElement(require("./react/musicdata"));
-const apilist = React.createElement(require("./react/apilist"));
-const loginpage = React.createElement(require("./react/login/loginpage"));
-const songcounter = React.createElement(require("./react/songcounter"));
 
 // These should always exist on every page
 ReactDOM.render(header, document.getElementById("header-wrapper"));
 ReactDOM.render(footer, document.getElementById("footer-wrapper"));
 
 // These should only be loaded if we are on a page that uses them
-if (document.getElementById("react-api")) {
-    ReactDOM.render(apilist, document.getElementById("react-api"));
+var elementReactApi = document.getElementById("react-api");
+if (elementReactApi) {
+    const apilist = React.createElement(require("./react/apilist"));
+    ReactDOM.render(apilist, elementReactApi);
 }
 
-if (document.getElementById("music-data")) {
-    ReactDOM.render(musicdata, document.getElementById("music-data"));
+var elementMusicData = document.getElementById("music-data");
+if (elementMusicData) {
+    const musicdata = React.createElement(require("./react/musicdata"));
+    ReactDOM.render(musicdata, elementMusicData);
 }
 
-if (document.getElementById("login-page")) {
-    ReactDOM.render(loginpage, document.getElementById("login-page"));
+var elementLoginPage = document.getElementById("login-page");
+if (elementLoginPage) {
+    const loginpage = React.createElement(require("./react/login/loginpage"));
+    ReactDOM.render(loginpage, elementLoginPage);
 }
 
-if (document.getElementById("song-counter")) {
-    ReactDOM.render(songcounter, document.getElementById("song-counter"));
+var elementSongCounter = document.getElementById("song-counter");
+if (elementSongCounter) {
+    const songcounter = React.createElement(require("./react/songcounter"));
+    ReactDOM.render(songcounter, elementSongCounter);
 }
