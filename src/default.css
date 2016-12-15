@@ -645,6 +645,7 @@
   }
 
   .rs-skill-name {
+	  text-transform: capitalize;
 	  min-width: 175px;
   }
 
