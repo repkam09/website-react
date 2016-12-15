@@ -599,3 +599,72 @@
   .recipe-ingredient {
 	  flex-grow: 1;
   }
+
+  .rs-hs-main {
+	  color: black;
+  }
+
+  .rs-med-level {
+	  color: yellow;
+  }
+
+   .rs-high-level {
+	  color: green;
+    }
+
+   .rs-max-level {
+	  color: green;
+   }
+
+   .rs-max-level-elite {
+	    color: green;
+		font-weight: bold;
+   }
+
+  .rs-skill-line {
+	  display: flex;
+	  justify-content: flex-start;
+	  padding: 5px;
+	  border-top: solid 2px black;
+  }
+
+
+  .rs-skill-line:nth-last-of-type(1) {
+	  border-bottom: solid 2px black; 
+  }
+
+  .rs-hs-player {
+	  border: solid 2px black;
+	  display: flex;
+	  justify-content: space-between;
+	  background-color: lightgray;
+  }
+
+  .rs-skill-line:nth-child(odd) {
+	  background-color: lightgray;
+  }
+
+  .rs-skill-name {
+	  min-width: 175px;
+  }
+
+  .rs-skill-rank {
+	  min-width: 175px;
+  }
+
+  .rs-skill-exp {
+	  min-width: 175px;  
+  }
+
+  .rs-skill-level {
+	  min-width: 175px;
+  }
+
+  .rs-skill-spacer {
+	  width: 16px;
+  }
+
+  .rs-hs-player-name {
+	  padding-left: 10px;
+	  line-height: 80px;
+  }

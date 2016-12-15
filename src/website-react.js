@@ -109,4 +109,10 @@ if (elementNowPlaying) {
 }
 
 
+var elementRuneScapeHs = document.getElementById("runescapehs");
+if (elementRuneScapeHs) {
+    const rshs = React.createElement(require("./react/runescapehs"));
+    ReactDOM.render(rshs, elementRuneScapeHs);
+}
+
 
