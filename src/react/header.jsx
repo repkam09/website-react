@@ -24,7 +24,10 @@ module.exports = React.createClass({
         var that = this;
 
         if (window.location.hostname !== "localhost") {
-            debugger;
+            // Load Google Analytics only if not debug
+            window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+            ga('create', 'UA-11568772-3', 'auto');
+            ga('send', 'pageview');
 
             // Get the current page from the window location
             var pagename = window.location.pathname;
