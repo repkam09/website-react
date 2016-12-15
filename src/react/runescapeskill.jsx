@@ -11,7 +11,7 @@ module.exports = React.createClass({
             csslevel = "rs-skill-level rs-max-level";
         }
 
-        if (skill.level >= 120 && skill.name == "invention" || skill.name == "dungeoneering") {
+        if (skill.level >= 120 && (skill.name == "invention" || skill.name == "dungeoneering")) {
             csslevel = "rs-skill-level rs-max-level-elite";
         }
 
