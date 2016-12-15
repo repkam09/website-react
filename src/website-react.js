@@ -101,3 +101,12 @@ if (elementQCComicViewer) {
     //const comicviewer = React.createElement(require("./react/comics/comicviewer"));
     //ReactDOM.render(comicviewer, elementQCComicViewer);
 }
+
+var elementNowPlaying = document.getElementById("now-playing-widget");
+if (elementNowPlaying) {
+    const nowplaying = React.createElement(require("./react/nowplaying"));
+    ReactDOM.render(nowplaying, elementNowPlaying);
+}
+
+
+
