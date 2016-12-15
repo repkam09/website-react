@@ -577,3 +577,25 @@
    }
  }
  
+
+ .recipe-image {
+	 padding-right: 10px;
+	 display: inline-block;
+ }
+
+ .recipe-description {	
+	 display: inline-block;
+ }
+
+ .recipe-ingredients {
+	 margin: 5px;
+ }
+
+ .flexbox {
+	 display: flex;
+	 flex-flow: row wrap;
+ }
+
+  .recipe-ingredient {
+	  flex-grow: 1;
+  }
