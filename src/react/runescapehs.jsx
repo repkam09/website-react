@@ -7,8 +7,16 @@ module.exports = React.createClass({
     },
 
     componentDidMount: function () {
+        // Get the URL params to check the username to load.
+        var username = getParameterByName('user');
+        if (username) {
+            this.setState({ username });
+        } else {
+            username = this.state.username;
+        }
+
         let that = this;
-        getreq("https://api.repkam09.com/api/runescape/rs3/current/" + this.state.username + "/json").then((response) => {
+        getreq("https://api.repkam09.com/api/runescape/rs3/current/" + username + "/json").then((response) => {
             var stats = JSON.parse(response);
             that.setState({ skills: stats.skills, player: stats.player });
         });
@@ -53,3 +61,16 @@ module.exports = React.createClass({
         }
     }
 });
+
+
+function getParameterByName(name, url) {
+    if (!url) {
+        url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
