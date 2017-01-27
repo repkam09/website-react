@@ -1,5 +1,7 @@
 const React = require('react');
+
 const Comic = require('./Comic.jsx');
+const Controls = require('./Controls.jsx');
 
 module.exports = React.createClass({
 
@@ -16,6 +18,7 @@ module.exports = React.createClass({
         var parse = parseInt(this.state.progress);
         return (
             <div>
+                <Controls />
                 <Comic name='qc' strip={parse} />
             </div>
         );
