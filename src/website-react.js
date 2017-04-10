@@ -11,7 +11,7 @@ window.postreq = function (url, body) {
         var sendbody = body;
         xmlhttp.open("POST", url, true);
 
-        let bodytype = typeof body;
+        var bodytype = typeof body;
         switch (bodytype) {
             case "object": {
                 xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");

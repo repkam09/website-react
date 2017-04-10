@@ -6,7 +6,7 @@ module.exports = React.createClass({
     },
 
     componentDidMount: function () {
-        let that = this;
+        var that = this;
         getreq("https://api.repkam09.com/api/music/now/repkam09").then((response) => {
             var nowplaying = JSON.parse(response);
             var list = nowplaying.recenttracks.track;

@@ -24,7 +24,7 @@ module.exports = React.createClass({
         console.log(this.state.username);
         console.log(this.state.password);
 
-        let that = this;
+        var that = this;
         getreq("https://api.repkam09.com/api/about").then((response) => {
             var apilist = JSON.parse(response);
             that.setState({ apilist });

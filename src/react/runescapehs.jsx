@@ -15,7 +15,7 @@ module.exports = React.createClass({
             username = this.state.username;
         }
 
-        let that = this;
+        var that = this;
         getreq("https://api.repkam09.com/api/runescape/rs3/current/" + username + "/json").then((response) => {
             var stats = JSON.parse(response);
             that.setState({ skills: stats.skills, player: stats.player });
@@ -25,7 +25,7 @@ module.exports = React.createClass({
     render: function () {
         if (this.state.skills && this.state.player) {
 
-            let skillarray = [];
+            var skillarray = [];
             for (var key in this.state.skills) {
                 if (this.state.skills.hasOwnProperty(key)) {
                     var obj = this.state.skills[key];
@@ -34,7 +34,7 @@ module.exports = React.createClass({
                 }
             }
 
-            let skilllist = skillarray.map((skill) => {
+            var skilllist = skillarray.map((skill) => {
                 return (
                     <RsSkillLine data={skill} />
                 );

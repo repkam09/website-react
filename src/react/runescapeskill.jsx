@@ -2,7 +2,7 @@ var React = require('react');
 
 module.exports = React.createClass({
     render: function () {
-        let skill = this.props.data;
+        var skill = this.props.data;
         var imageurl = "/img/runescape/" + skill.name + ".gif"
 
         var csslevel = "rs-skill-level";

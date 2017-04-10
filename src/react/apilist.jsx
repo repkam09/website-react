@@ -6,7 +6,7 @@ module.exports = React.createClass({
     },
 
     componentDidMount: function () {
-        let that = this;
+        var that = this;
         getreq("https://api.repkam09.com/api/about").then((response) => {
             var apilist = JSON.parse(response);
             that.setState({ apilist });
