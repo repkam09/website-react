@@ -21,7 +21,7 @@ module.exports = React.createClass({
 
             var newurl = current.image[3]["#text"];
             if (newurl === "") {
-                newurl = false;
+                newurl = "/img/albumart.jpg";
             }
 
             var newstate = {

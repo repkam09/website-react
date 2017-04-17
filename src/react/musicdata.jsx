@@ -40,9 +40,9 @@ module.exports = React.createClass({
 
 			var albumart = null;
 			if (this.state.albumimage) {
-				albumart = (
-					<img src={this.state.albumimage} width="100" height="100"></img>
-				);
+				//albumart = (
+				//	<img src={this.state.albumimage} width="100" height="100"></img>
+				//);
 			}
 
 			return (
